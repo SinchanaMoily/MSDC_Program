@@ -1,0 +1,299 @@
+INTERFACING GAS SENSOR WITH ESP32 MICROCONTROLLER
+
+Aim: To interface a Gas sensor with ESP32
+
+
+Components Required:
+•	ESP32 Microcontroller
+•	Gas sensor (MQ-2 sensor)
+•	Jumper wires
+•	PC/Laptop with Arduino IDE
+•	Serial communication cable
+
+
+Procedure:
+1.	Open Arduino IDE and enter the code.
+2.	Connect the Gas sensor (MQ-2 sensor) to ESP32 as per their pins
+3.	Connect the ESP32 to the PC/Laptop and upload the code to it
+4.	Verify the Output in the serial monitor.
+
+
+Code:
+
+int sensorPin = A0; int sensorValue = 0; void setup() { Serial.begin(9600);
+pinMode(sensorPin, INPUT);
+}
+void loop() {
+sensorValue = analogRead(sensorPin); Serial.print("Gas Sensor Value: "); Serial.println(sensorValue); delay(1000);
+}
+
+
+
+Result: The circuit is constructed & observed the output of the MQ-2 sensor in the serial monitor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INTERFACING GAS SENSOR WITH ARDUINO UNO
+
+Aim: To interface a Gas sensor with Arduino.
+
+
+Components Required:
+•	Arduino UNO Microcontroller
+•	Gas sensor (MQ-2 sensor)
+•	Jumper wires
+•	PC/Laptop with Arduino IDE
+•	Serial communication cable
+
+
+Procedure:
+1.	Open Arduino IDE and enter the code.
+2.	Connect the Gas sensor to Arduino UNO as per their pins
+3.	Connect the Arduino UNO to the PC/Laptop and upload the code to it
+4.	Verify the Output in the serial monitor.
+
+
+Code:
+
+int sensorPin = A0; int sensorValue = 0; void setup() { Serial.begin(9600);
+pinMode(sensorPin, INPUT);
+}
+
+void loop() {
+sensorValue = analogRead(sensorPin); Serial.print("Gas Sensor Value: "); Serial.println(sensorValue); delay(1000);
+}
+
+
+
+Result: The circuit is constructed & observed the output of the MQ-2 sensor in the serial monitor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INTERFACING FLAME SENSOR WITH ARDUINO UNO
+
+Aim: To interface a Flame sensor with Arduino.
+
+
+Components Required:
+•	Arduino UNO
+•	Flame sensor
+•	Jumper wires
+•	PC/Laptop with Arduino IDE
+•	Serial communication cable
+
+
+Procedure:
+1.	Open Arduino IDE and enter the code.
+2.	Connect the Flame sensor to Arduino UNO as per their pins
+3.	Connect the Arduino UNO to the PC/Laptop and upload the code to it
+4.	Verify the Output in the serial monitor.
+
+
+Code:
+
+int flameSensorPin = 12; void setup() {
+pinMode(flameSensorPin, INPUT); Serial.begin(9600);
+}
+void loop() {
+int flameValue = digitalRead(flameSensorPin); if (flameValue == LOW) {
+Serial.println("Flame detected!");
+} else {
+Serial.println("No flame detected.");
+}
+delay(500);
+}
+
+
+Result: The circuit is constructed & Flame sensor is sensed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INTERFACING FLAME SENSOR WITH ESP32 MICROCONTROLLER
+
+Aim: To interface a Flame sensor with ESP32 Microcontroller.
+
+
+Components Required:
+•	ESP32 Microcontroller
+•	Jumper wires
+•	PC/Laptop with Arduino IDE
+•	Serial communication cable
+
+
+Procedure:
+1.	Open Arduino IDE and enter the code.
+2.	Connect the Flame sensor to ESP32 Microcontroller as per their pins
+3.	Connect the ESP32 Microcontroller to the PC/Laptop and upload the code to it
+4.	Verify the Output in the serial monitor.
+
+
+Code:
+int flameSensorPin = 12; void setup() {
+pinMode(flameSensorPin, INPUT); Serial.begin(9600);
+}
+void loop() {
+int flameValue = digitalRead(flameSensorPin); if (flameValue == LOW) {
+Serial.println("Flame detected!");
+} else {
+Serial.println("No flame detected.");
+}
+delay(500);
+}
+
+
+Result: The circuit is constructed & Flame sensor is sensed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INTERFACING ALCOHOL SENSOR WITH ESP32 Microcontroller
+
+Aim: To interface an Alcohol sensor with ESP32 Microcontroller
+
+Components Required:
+•	ESP32 Microcontroller
+•	Jumper wires
+•	PC/Laptop with Arduino IDE
+•	Serial communication cable
+
+
+Procedure:
+1.	Open Arduino IDE and enter the code.
+2.	Connect the Flame sensor to ESP32 Microcontroller as per their pins
+3.	Connect the ESP32 Microcontroller to the PC/Laptop and upload the code to it
+4.	Verify the Output in the serial monitor.
+
+
+Code:
+int alcoholSensorPin = A0; void setup() { Serial.begin(9600);
+}
+void loop() {
+int sensorValue = analogRead(alcoholSensorPin); Serial.print("Alcohol Sensor Value: "); Serial.println(sensorValue);
+delay(1000);
+}
+
+
+
+Result: The circuit is constructed & Alcohol sensor is sensed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INTERFACING ALCOHOL SENSOR WITH ARDUINO UNO
+
+Aim: To interface an Alcohol sensor with Arduino UNO and to find the distance of object.
+
+
+Components Required:
+•	Arduino UNO
+•	Jumper wires
+•	PC/Laptop with Arduino IDE
+•	Serial communication cable
+
+
+Procedure:
+1.	Open Arduino IDE and enter the code.
+2.	Connect the Flame sensor to Arduino UNO as per their pins
+3.	Connect the Arduino UNO to the PC/Laptop and upload the code to it
+4.	Verify the Output in the serial monitor.
+
+
+Code:
+int alcoholSensorPin = A0; void setup() { Serial.begin(9600);
+}
+void loop() {
+int sensorValue = analogRead(alcoholSensorPin); Serial.print("Alcohol Sensor Value: "); Serial.println(sensorValue);
+delay(1000);
+}
+
+
+Result: The circuit is constructed & Alcohol sensor is sensed.
+ 
