@@ -1,0 +1,192 @@
+
+INTERFACING IR SENSOR WITH ARDUINO UNO
+Aim: To interface DHT 11 sensor with Arduino uno to measure humidity and temperature.
+Components required:
+ Arduino uno
+ IR sensor
+ Jumper wire
+ Serial communication cable
+ PC/Laptop
+Procedure:
+1)Open the Arduino IDE software & write the code
+2) Connect the Laptop with ARDUINO UNO microcontroller using serial communication cable
+3) Connect the IR sensor with ARDUINO UNO microcontroller
+4) Upload the code
+5) Verify the output in serial monitor
+
+
+Code:
+int irSensorPin = 7;
+void setup() {
+pinMode(irSensorPin, INPUT);
+Serial.begin(9600);
+}
+void loop() {
+int irValue = digitalRead(irSensorPin);
+if (irValue == LOW) {
+Serial.println("Object detected!");
+} else {
+Serial.println("No object detected.");
+}
+delay(500);
+}
+
+Result: The circuit is constructed & observed the output of IR sensor the serial monitor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INTERFACING DHT 11 SENSOR WITH ARDUINO UNO
+Aim: To interface DHT 11 sensor with Arduino uno to measure humidity and temperature.
+Components required:
+ Arduino uno
+ DHT11 sensor
+ Jumper wire
+ Serial communication cable
+ PC/Laptop
+Procedure:
+1)Open the Arduino IDE software & write the code
+2) Connect the Laptop with ARDUINO UNO microcontroller using serial communication cable
+3) Connect the DHT11 sensor with ARDUINO UNO microcontroller
+4) Upload the code
+5) Verify the output in serial monitor
+
+
+Code:
+#include <Bonezegei_DHT11.h>
+Bonezegei_DHT11 dht(14);
+void setup() {
+Serial.begin(115200);
+dht.begin();
+}
+void loop() {
+if (dht.getData()) {
+float tempDeg = dht.getTemperature();
+float tempFar = dht.getTemperature(true);
+int hum = dht.getHumidity();
+String str = "Temperature: ";
+str += tempDeg;
+str += "°C ";
+str += tempFar;
+str += "°F Humidity:";
+str += hum;
+Serial.println(str.c_str());
+}
+delay(2000);
+}
+Result: The circuit is constructed & observed the output of measured humidity &
+temperature value on the serial monitor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INTERFACING ULTRASONIC SENSOR WITH ESP32 Microcontroller
+Aim: To interface an Ultrasonic sensor with ESP32 and to find the distance of object.
+Components Required:
+ ESP32 Microcontroller
+ Ultrasonic Sensor HC-SR04
+ Jumper wires
+ PC/Laptop with Arduino IDE
+ Serial communication cable
+Procedure:
+1. Open Arduino IDE and enter the code.
+2. Connect the Ultrasonic Sensor HC-SR04 to ESP32 as per their pins
+3. Connect the ESP32 to the PC/Laptop and upload the code to it
+4. Verify the Output in the serial monitor.
+
+
+Code:
+#include <Ultrasonic.h>
+Ultrasonic ultrasonic1(12, 13);
+Ultrasonic ultrasonic2(10);
+Ultrasonic ultrasonic3(8);
+void setup() {
+Serial.begin(9600);
+}
+void loop() {
+Serial.print("Sensor 01: ");
+Serial.print(ultrasonic1.read());
+Serial.println("cm");
+Serial.print("Sensor 02: ");
+Serial.print(ultrasonic2.read(CM));
+Serial.println("cm");
+Serial.print("Sensor 03: ");
+Serial.print(ultrasonic3.read(INC));
+Serial.println("inc");
+delay(1000);
+}
+Result: The circuit is constructed & the distance is measured & observed on the serial
+monitor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+INTERFACING ULTRASONIC SENSOR WITH ARDUINO UNO
+Aim: To interface an Ultrasonic sensor with Arduino UNO to find the distance of object.
+Components Required:
+ Arduino UNO
+ Ultrasonic Sensor HC-SR04
+ Jumper wires
+ PC/Laptop with Arduino IDE
+ Serial communication cable
+Procedure:
+1. Open Arduino IDE and enter the code.
+2. Connect the Ultrasonic Sensor HC-SR04 to Arduino UNO as per their pins
+3. Connect the Arduino UNO to the PC/Laptop and upload the code to it
+4. Verify the Output in the serial monitor.
+
+
+Code:
+#include <Ultrasonic.h>
+Ultrasonic ultrasonic1(12, 13);
+Ultrasonic ultrasonic2(10);
+Ultrasonic ultrasonic3(8);
+void setup() {
+Serial.begin(9600);
+}
+void loop() {
+Serial.print("Sensor 01: ");
+Serial.print(ultrasonic1.read());
+Serial.println("cm");
+Serial.print("Sensor 02: ");
+Serial.print(ultrasonic2.read(CM));
+Serial.println("cm");
+Serial.print("Sensor 03: ");
+Serial.print(ultrasonic3.read(INC));
+Serial.println("inc");
+delay(1000);
+}
+Result: The circuit is constructed & the distance is measured & observed on the serial
+monitor.
